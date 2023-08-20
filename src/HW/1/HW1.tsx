@@ -1,5 +1,18 @@
 import {UserList} from './UserList';
 
+
+// type UsersType = {
+// 	id: number
+// 	name: string
+// 	age: number
+// 	address: UsersAddresType
+// }
+
+// type UsersAddresType = {
+// 	street: string
+// 	city: string
+// }
+
 export const HW1 = () => {
 
 	// 1️⃣ Раскомментируйте JSX (HW1.tsx, UserList.tsx) и вы увидите,
@@ -34,7 +47,7 @@ export const HW1 = () => {
 
 	return (
 		<div id={'hw01'}>
-			{/*<UserList users={'НАЗВАНИЕ МАССИВА, КОТОРЫЙ МЫ ПЕРЕДАЕМ'} />*/}
+			<UserList users={users} />
 		</div>
 	);
 };
