@@ -10,7 +10,7 @@ export const HW3 = () => {
   // - приложение должно компилироваться и запускаться в браузере
 
 
-  const [currentText, setCurrentText] = useState('');
+  const [currentText, setCurrentText] = useState<string>('');
   const [texts, setTexts] = useState<string[]>([
     'То, что вы делаете по ночам, то и делает вас богатым. (Аль Капоне)',
   ]);
@@ -23,10 +23,10 @@ export const HW3 = () => {
   const handleSave = () => {
     // ЗАСЕТАТЬ БЫ ТЕКСТ В texts И НЕ ПОТЕРЯТЬ НАПУТСТВИЕ ИЗ ПРОШЛОГО ВЕКА)
     // А ЗАТЕМ УБРАТЬ ЗА СОБОЙ В currentText
-    
-    setCurrentText('')
-  console.log('work');
-  
+    if (currentText !== '') {
+      setTexts([...texts, currentText]);
+      setCurrentText('');
+    }
   };
 
   return (
